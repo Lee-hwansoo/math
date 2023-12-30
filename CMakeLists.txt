@@ -80,18 +80,18 @@ add_subdirectory(${${PROJECT_NAME}_APPLICATION_PATH})
 
 # ! Add source files here
 set(${PROJECT_NAME}_SOURCE_FILES
-    src/main.cpp
+    src/utils.cpp
 )
 
 # ! If you want to make a library, use the following code
-# add_library(${PROJECT_NAME} STATIC
-#   ${${PROJECT_NAME}_SOURCE_FILES}
-# )
+add_library(${PROJECT_NAME} STATIC
+  ${${PROJECT_NAME}_SOURCE_FILES}
+)
 
 # ! If you want to make an executable, use the following code
-add_executable(${PROJECT_NAME}
-    ${${PROJECT_NAME}_SOURCE_FILES}
-)
+# add_executable(${PROJECT_NAME}
+#     ${${PROJECT_NAME}_SOURCE_FILES}
+# )
 
 # ! If you want to add include directories and link libraries, use the following code
 target_include_directories(${PROJECT_NAME} PUBLIC
