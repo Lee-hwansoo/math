@@ -6,6 +6,7 @@ set(UNDER_BAR "_")
 set(${PROJECT_NAME}_${TEST_TYPE}_SOURCE_FILES
   # ! Add source files here
   main
+  utils
 )
 
 function(add_test_executable EXECUTABLE_NAME SOURCE_FILES)
@@ -16,7 +17,7 @@ function(add_test_executable EXECUTABLE_NAME SOURCE_FILES)
 
   target_link_libraries(${EXECUTABLE_NAME} PRIVATE
     ${GTest_LIBRARIES}
-    # ${PROJECT_NAME}
+    ${PROJECT_NAME}
   )
 
   add_test(NAME ${EXECUTABLE_NAME} COMMAND
